@@ -26,6 +26,7 @@ function PostNavigator({ prevPost, nextPost }) {
     }, []);
     
   return (
+    <>
     <div className="post-navigator">      
       <div className="post-navigator-card-wrapper">
         {nextPost && (
@@ -42,13 +43,14 @@ function PostNavigator({ prevPost, nextPost }) {
             <div className="title">{prevPost.title}</div>
           </Link>
         )}
-      </div>
-      <ins className="adsbygoogle"
-           style={{ display: 'block' }}
-           data-ad-format="autorelaxed"
-           data-ad-client="ca-pub-1067668052326016"
-           data-ad-slot="8256651582"></ins>
+      </div>     
     </div>
+    <ins className="adsbygoogle"
+    style={{ display: 'block' }}
+    data-ad-format="autorelaxed"
+    data-ad-client="ca-pub-1067668052326016"
+    data-ad-slot="8256651582"></ins>
+    </>
   );
 }
 
