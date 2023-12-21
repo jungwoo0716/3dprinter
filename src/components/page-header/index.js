@@ -27,11 +27,12 @@ function PageHeader({ siteTitle }) {
       `}
       render={(data) => (
         <header className="page-header-wrapper">  
-          <Helmet>
-            <meta name="google-site-verification" content="KzlsKQF7AFEoHXuXUBvLrXJehghsraUq0Kdc49wKbrA" />
+          <Helmet>            
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1067668052326016"
               crossorigin="anonymous"></script>
-          </Helmet>        
+              {/* Google Site Verification Meta Tag */}
+            <meta name="google-site-verification" content="KzlsKQF7AFEoHXuXUBvLrXJehghsraUq0Kdc49wKbrA" />
+          </Helmet>    
           <div className="page-header">
             <div className="front-section">
               <Link className="link" to="/">
