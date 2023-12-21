@@ -25,6 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="page-wrapper">
+      <meta name="google-site-verification" content="KzlsKQF7AFEoHXuXUBvLrXJehghsraUq0Kdc49wKbrA" />
       <PageHeader siteTitle={title || `Title`} />
       <main className="page-content">{children}</main>
       <PageFooter
