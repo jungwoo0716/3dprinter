@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import PageHeader from '../components/page-header';
 import PageFooter from '../components/page-footer';
 import ThemeSwitch from '../components/theme-switch';
+import { Helmet } from 'react-helmet';
 import './style.scss';
 
 const Layout = ({ children }) => {
@@ -24,8 +25,15 @@ const Layout = ({ children }) => {
   const { title, author } = data.site.siteMetadata;
 
   return (
-    <div className="page-wrapper">
-      <meta name="google-site-verification" content="KzlsKQF7AFEoHXuXUBvLrXJehghsraUq0Kdc49wKbrA" />
+    <div className="page-wrapper">    
+      <Helmet
+        meta={[          
+          {
+            name: 'google-site-verification',
+            content: 'KzlsKQF7AFEoHXuXUBvLrXJehghsraUq0Kdc49wKbrA'
+          }
+        ]}        
+      />
       <PageHeader siteTitle={title || `Title`} />
       <main className="page-content">{children}</main>
       <PageFooter
